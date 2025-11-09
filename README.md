@@ -32,6 +32,7 @@ The server will start on port 8080.
 * GET /api/locations/location?location={name} - Find location by name (case-insensitive)
 * GET /api/locations/maxFare?maxAmount={amount} - Find locations with fare less than specified amount
 * GET /api/locations/calculateFare?name={name}&numberOfCustomers={count} - Calculate total fare for multiple customers
+* DELETE /api/locations/delete/{id} - Delete record by ID
 ## Database
 The application uses an H2 in-memory database. Access the H2 console at:
 
