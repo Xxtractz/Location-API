@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7fc624e7-ad4f-4a19-8acd-f499f468ed09" name="Changes" comment="#comment testing push">
+      <change beforePath="$PROJECT_DIR$/Location API/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Location API/src/main/java/com/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Location API/src/main/java/com/example/controller/LocationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Location API/src/main/java/com/example/model/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Location API/src/main/java/com/example/repository/LocationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Location API/src/main/java/com/example/service/LocationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Location API/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Location API/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Location API/target/classes/com/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Location API/target/classes/com/example/controller/LocationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Location API/target/classes/com/example/model/Location.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Location API/target/classes/com/example/repository/LocationRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Location API/target/classes/com/example/service/LocationService.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Xxtractz"
+  }
+}]]></component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1769119067" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature" />
+                    <option name="lastUsedInstant" value="1769119021" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Xxtractz/Location-API.git",
+    "accountId": "63ab9160-22b5-4aef-963c-521276d85a00"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="35XrDaMqZQUduAex9LOKZ91HAMy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="SpringDataJPAConcepts" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28539.33" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28539.33" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7fc624e7-ad4f-4a19-8acd-f499f468ed09" name="Changes" comment="" />
+      <created>1763267141652</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763267141652</updated>
+      <workItem from="1763267143638" duration="8498000" />
+      <workItem from="1769118321571" duration="1520000" />
+    </task>
+    <task id="LOCAL-00001" summary="#comment testing push">
+      <option name="closed" value="true" />
+      <created>1769119140097</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1769119140097</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="#comment testing push" />
+    <option name="LAST_COMMIT_MESSAGE" value="#comment testing push" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
