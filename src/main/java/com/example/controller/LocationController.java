@@ -1,51 +1,59 @@
 package com.example.controller;
 
 import com.example.model.Location;
+import com.example.model.LocationDTO;
 import com.example.service.LocationService;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
-//THE 'Location' CONTROLLER CLASS:
 @RestController
 @RequestMapping("api/locations")
 public class LocationController {
-    private LocationService service;
 
-    public LocationController(LocationService service){
+    private final LocationService service;
+
+    public LocationController(LocationService service) {
         this.service = service;
     }
 
-    //ENDPOINT A:
-    @PostMapping()
-    public Location saveLocationEndpoint(@RequestBody Location location){
+    @GetMapping
+    public List<LocationDTO> findAll() {
+        return service.findAll();
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public LocationDTO saveLocation(@Valid @RequestBody Location location) {
         return service.saveLocation(location);
     }
 
-    //ENDPOINT B:
     @GetMapping("/region")
-    public List<Location> findLocationByRegionEndpoint(@RequestParam String region){
+    public List<LocationDTO> findByRegion(@RequestParam String region) {
         return service.findLocationByRegion(region);
     }
 
-    //ENDPOINT C:
     @GetMapping("/location")
-    public Location findLocationByNameEndpoint(@RequestParam String location){
+    public LocationDTO findByName(@RequestParam String location) {
         return service.findLocationByName(location);
     }
 
-    //ENDPOINT D:
     @GetMapping("/maxFare")
-    public List<Location> findFareLessThanEndpoint(@RequestParam Double maxAmount){
+    public List<LocationDTO> findByFareLessThan(@RequestParam Double maxAmount) {
         return service.filterByFareLessThan(maxAmount);
     }
 
-    //ENDPOINT E:
-    @GetMapping("calculateFare")
-    public String calculateFareBasedOnCustomersEndpoint(@RequestParam String name, @RequestParam Integer numberOfCustomers){
-        Double fareAmount = service.calculateFareBasedOnCustomers(name) * numberOfCustomers;
-
-        return "The fare to " + name + " for " + numberOfCustomers + " people is " + fareAmount;
+    @GetMapping("/calculateFare")
+    public Map<String, Object> calculateFare(@RequestParam String name,
+                                             @RequestParam int numberOfCustomers) {
+        double totalFare = service.calculateFare(name, numberOfCustomers);
+        return Map.of(
+                "location", name,
+                "customers", numberOfCustomers,
+                "totalFare", totalFare
+        );
     }
-
 }

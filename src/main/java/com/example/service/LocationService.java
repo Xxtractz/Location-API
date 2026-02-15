@@ -1,45 +1,53 @@
 package com.example.service;
 
+import com.example.exception.LocationNotFoundException;
 import com.example.model.Location;
+import com.example.model.LocationDTO;
 import com.example.repository.LocationRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-//THE 'Location' SERVICE CLASS:
 @Service
 public class LocationService {
-    private LocationRepository repository;
 
-    //CONSTRUCTOR INJECTION:
-    public LocationService(LocationRepository repository){
+    private final LocationRepository repository;
+
+    public LocationService(LocationRepository repository) {
         this.repository = repository;
     }
 
-    //THE 'saveLocation()' SERVICE METHOD:
-    public Location saveLocation(Location location){
-        return repository.save(location);
+    public LocationDTO saveLocation(Location location) {
+        return LocationDTO.from(repository.save(location));
     }
 
-    //THE 'findLocationByRegion()' SERVICE METHOD:
-    public List<Location> findLocationByRegion(String region){
-        return repository.findByRegionIgnoreCase(region);
+    public List<LocationDTO> findAll() {
+        return repository.findAll().stream()
+                .map(LocationDTO::from)
+                .toList();
     }
 
-    //THE 'findByLocationByName()' SERVICE METHOD:
-    public Location findLocationByName(String name){
-        return repository.findByNameIgnoreCase(name);
+    public List<LocationDTO> findLocationByRegion(String region) {
+        return repository.findByRegionIgnoreCase(region).stream()
+                .map(LocationDTO::from)
+                .toList();
     }
 
-    //THE 'filterByFareLessThan()' SERVICE METHOD:
-    public List<Location> filterByFareLessThan(Double maxAmount){
-        return repository.findByFareLessThan(maxAmount);
+    public LocationDTO findLocationByName(String name) {
+        return repository.findByNameIgnoreCase(name)
+                .map(LocationDTO::from)
+                .orElseThrow(() -> new LocationNotFoundException(name));
     }
 
-    //THE 'calculateFareBasedOnCustomers()' SERVICE METHOD:
-    public Double calculateFareBasedOnCustomers(String name){
-        return repository.calculateFareBasedOnLocation(name);
+    public List<LocationDTO> filterByFareLessThan(Double maxAmount) {
+        return repository.findByFareLessThan(maxAmount).stream()
+                .map(LocationDTO::from)
+                .toList();
     }
 
-
+    public double calculateFare(String name, int numberOfCustomers) {
+        Location location = repository.findByNameIgnoreCase(name)
+                .orElseThrow(() -> new LocationNotFoundException(name));
+        return location.getFare() * numberOfCustomers;
+    }
 }

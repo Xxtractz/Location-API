@@ -1,49 +1,61 @@
 package com.example.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
-//THE 'Location' ENTITY CLASS:
 @Entity
 public class Location {
-    //THE CLASS PROPERTIES:
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank
     private String region;
+
+    @NotBlank
+    @Column(unique = true)
     private String name;
+
+    @NotNull
+    @Positive
     private Double fare;
 
-    //THE DECORATED CONSTRUCTORS:
-    public Location(String region, String name, Double fare){
+    public Location(String region, String name, Double fare) {
         this.region = region;
         this.name = name;
         this.fare = fare;
     }
-    //THE DEFAULT CONSTRUCTOR:
-    public Location(){}
 
-    //GETTERS & SETTERS:
-    public String getRegion(){
+    public Location() {}
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getRegion() {
         return region;
     }
-    public void setLocation(String location){
-        this.region = location;
+
+    public void setRegion(String region) {
+        this.region = region;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
 
-    public Double getFare(){
+    public Double getFare() {
         return fare;
     }
-    public void setFare(Double fare){
+
+    public void setFare(Double fare) {
         this.fare = fare;
     }
 }
